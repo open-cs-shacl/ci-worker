@@ -12,12 +12,10 @@ def main():
             '- input dir – root of OpenCS repo (no trailing slash)'
         )
         exit(1)
-
     in_dir = sys.argv[1]
-    
-    process_ontology(in_dir, out_dir, version)
+    process_validate_ontology(in_dir)
 
-def process_ontology(in_dir: str):
+def process_validate_ontology(in_dir: str):
     g = Graph()
     g.parse(in_dir + '/ontology/header.ttl')
     opencs.parse_all(g, in_dir + '/ontology/core/**/*.ttl')
