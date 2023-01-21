@@ -1,7 +1,6 @@
 from pyshacl import validate
 from rdflib import Graph
 import sys
-import re
 
 import opencs
 
