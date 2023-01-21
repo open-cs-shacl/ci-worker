@@ -22,7 +22,7 @@ def process_validate_ontology(in_dir: str):
     g.parse(in_dir + '/ontology/authors.ttl')
     with open(in_dir + '/ontology/shacl_constraints.ttl', encoding='utf8') as f:
         shacl_text = f.read()
-    opencs.validate_shacl(g, shacl_text)
+    validate_shacl(g, shacl_text)
     
 def validate_shacl(g: Graph, shacl_text: str):
     report = validate(g,
