@@ -26,7 +26,7 @@ def process_validate_ontology(in_dir: str):
     
 def validate_shacl(g: Graph, shacl_text: str):
     report = validate(g,
-        shacl_graph=shacl_file,
+        shacl_graph=shacl_text,
         ont_graph=None,
         inference=None,
         abort_on_first=False,
