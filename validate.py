@@ -20,7 +20,7 @@ def process_validate_ontology(in_dir: str):
     g.parse(in_dir + '/ontology/header.ttl')
     opencs.parse_all(g, in_dir + '/ontology/core/**/*.ttl')
     g.parse(in_dir + '/ontology/authors.ttl')
-    with open(in_dir + '/ontology/shacl_text.ttl', encoding='utf8') as f:
+    with open(in_dir + '/ontology/shacl_constraints.ttl', encoding='utf8') as f:
         shacl_text = f.read()
     opencs.validate_shacl(g, shacl_text)
     
